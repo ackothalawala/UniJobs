@@ -36,8 +36,7 @@ export default function RegistrationScreen({navigation}) {
         auth()
             .createUserWithEmailAndPassword(email, password)
             .then(() => {
-                // Additional logic to save username in your database if needed
-                // For now, just alerting the user that the account is created
+                
                 Alert.alert('User Created', `E-mail: ${email}\nPassword: ${password}\nUsername: ${fullName}`);
             })
             .catch(err => {
